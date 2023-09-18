@@ -47,6 +47,12 @@
   margin-left: 3rem;
 }
 
+@media (max-width: 480px) {
+  .menuSide {
+    width: 35%;
+  }
+}
+
 .menuSide_button {
   font-size: 2rem;
   width: 15rem;
@@ -70,6 +76,12 @@
 
 .canvasSide {
   width: 75%;
+}
+
+@media (max-width: 480px) {
+  .canvasSide {
+    width: 65%;
+  }
 }
 
 .wrapper {
