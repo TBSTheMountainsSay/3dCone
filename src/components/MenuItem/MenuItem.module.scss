@@ -1,0 +1,17 @@
+.menuItem {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  .title {
+    font-size: 2.5rem;
+    color: var(--text);
+  }
+  .input {
+    font-size: 2rem;
+    max-width: 11rem;
+    background-color: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}

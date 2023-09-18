@@ -1,0 +1,91 @@
+@import 'color';
+
+*,
+*:after,
+*:before {
+  font-size: calc(3px + 7 * (100vw / 1920));
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 1920px) {
+  *,
+  *:after,
+  *:before {
+    font-size: calc(2px + 8 * (100vw / 1920));
+  }
+}
+
+@media (max-width: 1280px) {
+  *,
+  *:after,
+  *:before {
+    font-size: calc(4px + 6 * (100vw / 1920));
+  }
+}
+
+@media (max-width: 480px) {
+  *,
+  *:after,
+  *:before {
+    font-size: calc(8px + 2 * (100vw / 1920));
+  }
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.menuSide {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-self: center;
+  margin-left: 3rem;
+}
+
+.menuSide_button {
+  font-size: 2rem;
+  width: 15rem;
+  background-color: var(--background);
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.3s;
+  color: var(--text);
+}
+
+.menuSide_button:hover {
+  font-size: 2rem;
+  width: 16rem;
+  background-color: var(--background-hover);
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.canvasSide {
+  width: 75%;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.svg-preloader {
+  stroke: var(--button);
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+}
+:root {
+  @each $name, $color in $light-theme {
+    --#{$name}: #{$color};
+  }
+  color-scheme: light;
+}
