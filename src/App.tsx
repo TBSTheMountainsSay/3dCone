@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'src/css/reset.scss';
 import 'src/css/global.scss';
 import Cone from './features/Cone/Cone';
@@ -11,10 +11,14 @@ import { fetchTriangulations } from './API/API';
 import { Vector3 } from 'three';
 
 function App() {
-  const [height, setHeight] = useState(0);
-  const [radius, setRadius] = useState(0);
-  const [segments, setSegments] = useState(0);
+  const [height, setHeight] = useState(5);
+  const [radius, setRadius] = useState(2);
+  const [segments, setSegments] = useState(15);
   const [triangulation, setTriangulation] = useState<TTriangulation>([]);
+
+  useEffect(() => {
+    handleSend();
+  }, []);
 
   const handleChangeHeight = (number: number) => {
     setHeight(number);

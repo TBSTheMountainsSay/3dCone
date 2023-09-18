@@ -7,7 +7,7 @@ export const fetchTriangulations = async (
 ): Promise<TTriangulationResponse> => {
   try {
     const response = await fetch(
-      `http://localhost:3001/triangulation?height=${height}&radius=${radius}&segments=${segments}`
+      `https://threedconebackend.onrender.com/triangulation?height=${height}&radius=${radius}&segments=${segments}`
     );
     return response.json();
   } catch (e: any) {
